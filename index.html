@@ -16,8 +16,9 @@
         }
         .container {
             display: flex;
+            flex-direction: column; /* Change to column for better vertical alignment */
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center; /* Center align the child elements */
             width: 80%;
             max-width: 1200px;
             margin: auto;
@@ -26,20 +27,29 @@
             padding: 20px;
             border-radius: 8px;
         }
-        .questions {
-            width: 30%;
-            padding: 20px;
-            border-left: 2px solid #ccc;
+        .content {
+            display: flex;
+            width: 100%; /* Make sure it uses full container width */
+        }
+        .avatar, .questions {
+            flex: 1; /* Make avatar and questions take equal space */
+            padding: 10px; /* Added padding for internal spacing */
         }
         .avatar {
-            width: 70%;
+            max-width: 70%;
             height: 400px; /* Adjust based on your needs */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .questions {
+            max-width: 30%;
+            border-left: 2px solid #ccc;
         }
         h1 {
             color: #333;
             text-align: center; /* Center align the title */
-            margin-top: 0; /* Remove top margin for alignment at the top of the page */
-            width: 100%; /* Ensure it spans the full width of the container */
+            margin: 10px 0; /* Adjusted margin for better spacing */
         }
         ul {
             list-style-type: none;
